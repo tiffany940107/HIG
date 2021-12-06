@@ -6,7 +6,7 @@ We apply NodeDrop augmentation and KL divergence constraint to solve this challe
 The techniqual report can be checked at ./report/.
 
 ## Requirements
-1. Install base packages:
+  Install base packages:
     ```bash
     Python>=3.7
     Pytorch>=1.9.0
@@ -107,7 +107,7 @@ sh ./examples/ogb/finetune_kl.sh
 ```
 
 
-##Reference 
+Reference 
 ---------
 - https://libauc.org/
 - https://github.com/Optimization-AI/LibAUC
