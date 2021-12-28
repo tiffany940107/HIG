@@ -1,8 +1,8 @@
-# NodeDrop Augmentation Method on Graph Property Prediction
+# Heterogeneous interpolation on graph
 The ogbg-molhiv and ogbg-molpcba datasets are two molecular property prediction datasets of different sizes: ogbg-molhiv (small) and ogbg-molpcba (medium).
 The task is to predict the target molecular properties as accurately as possible, where the molecular properties are cast as binary labels, e.g, whether a molecule inhibits HIV virus replication or not. Note that some datasets (e.g., ogbg-molpcba) can have multiple tasks, and can contain nan that indicates the corresponding label is not assigned to the molecule.
 The challenge leaderboard can be checked at: https://ogb.stanford.edu/docs/leader_graphprop/.
-We apply NodeDrop augmentation and KL divergence constraint to solve this challenge and this repo contains our code submission.
+We apply Heterogeneous interpolation to solve this challenge and this repo contains our code submission.
 The techniqual report can be checked at ./report/.
 
 ## Requirements
@@ -26,13 +26,13 @@ Running the default code 10 times, here we present our results on the ogbg-molhi
 
 | Dataset | Method             |Test AUROC    |Validation AUROC  | Parameters    | Hardware |
 | ------------------ | ------------------ |------------------- | ----------------- | -------------- |----------|
-| ogbg-molhiv | DeepGCN+NodeDrop   | 0.8403±0.0021 | 0.8176±0.0034 | 1019408   | Tesla V100 (32GB) |
+| ogbg-molhiv | DeepGCN+HIG   | 0.8403±0.0021 | 0.8176±0.0034 | 1019408   | Tesla V100 (32GB) |
 
 For ogbg-molpcba, we use Graphormer as our backbone.
 
 | Dataset | Method             |Test AP    |Validation AP  | Parameters    | Hardware |
 |------------------- | ------------------ |------------------- | ----------------- | -------------- |----------|
-| ogbg-molpcba | Graphormer+NodeDrop   | 0.3167±0.0034 | 0.3252±0.0043 | 119529665   | Tesla V100 (32GB) |
+| ogbg-molpcba | Graphormer+HIG   | 0.3167±0.0034 | 0.3252±0.0043 | 119529665   | Tesla V100 (32GB) |
 
 
 
