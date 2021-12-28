@@ -92,7 +92,7 @@ We offer one sample log file: log_ft_molhiv_20211202.txt.
 
 The training process has three steps:
 ```
-cd ./Graphormer_with_Nodedrop
+cd ./Graphormer_with_HIG
 ```
 1) Pretrain: Pretrain a Graphormer model on dataset PCQM4M.
 ```
